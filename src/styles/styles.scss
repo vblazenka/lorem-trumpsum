@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+@import 'reset';
+
+/* Variables */
+$red: #D6274C;
+$yellow: #f1c40f;
+$dark: #272D3A;
+
+$lightTextColor: $dark;
+$darkTextColor: $dark;
+
+/* Styles */
+body {
+  background-color: #ecf0f1;
+
+  font: 16px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.3;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+p {
+  font-size: 22px;
+  font-weight: 500;
+
+  &:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.home {
+  padding: 50px;
+}
+
+/* Components */
+.quote {
+  width: 700px;
+  height: 60px;
+  margin: 0 auto;
+
+  background: url('../static/quote.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.text {
+  margin-top: 80px;
+
+  color: $dark;
+}
+
+.checkbox {
+  display: flex;
+
+  align-items: center;
+
+  input {
+    cursor: pointer;
+  }
+
+  label {
+    margin-left: 10px;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: $dark;
+
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+  }
+}
+
+.status {
+  margin: 30px 0;
+
+  text-transform: uppercase;
+
+  color: $dark;
+
+  font-family: 'Oswald', sans-serif;
+  font-size: 28px;
+
+  span {
+    margin-left: 8px;
+    padding: 3px;
+
+    color: $yellow;
+    background-color: $dark;
+  }
+}
+
+// Component groups
+.slider {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.status {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox {
+  cursor: pointer;
+}
+
+.checkbox-group {
+
+}
+
+.rc-slider-rail {
+  height: 10px !important;
+
+  background-color: $dark !important;
+}
+
+.rc-slider-track {
+  height: 10px !important;
+
+  border-radius: 0 !important;
+  background-color: $yellow !important;
+}
+
+.rc-slider-handle {
+  width: 30px !important;
+  height: 30px !important;
+  margin-top: -10px !important;
+  margin-left: -7px !important;
+
+  border: 0 !important;
+  background-color: $dark !important;
+}
+
+/* Form */
+.form {
+  &__group {
+    display: flex;
+
+    justify-content: center;
+  }
+
+  &__slider {
+
+  }
+}
+
+.checkbox-group {
+  margin: 100px 0 50px 0;
+
+  &:not(:last-of-type) {
+    margin-right: 100px;
+  }
+}
