@@ -8,4 +8,21 @@ const rootReducer = combineReducers({
   routing: routerReducer
 });
 
+/*
+{
+  generate: {
+    type: 'paragraphs',
+    size: 1,
+    text: ['...']
+  },
+  router: {
+    ...
+  }
+}
+
+store.getState().generate.type
+store.getState().generate.size
+...
+*/
+
 export default rootReducer;

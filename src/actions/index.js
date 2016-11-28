@@ -33,10 +33,11 @@ export function onChangeSize(size) {
     const state = getState();
 
     dispatch(changeSize(size));
-
+   //loading
     const loremText = generatorService(size, state.generator.type);
 
     dispatch(changeText(loremText));
+    // stop loading
   };
 }
 
