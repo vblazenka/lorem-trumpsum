@@ -5,7 +5,7 @@ The purpose of this app was to showcase how to connect existing React applicatio
 
 ## Get Started
 1. **Clone the project**. `git clone https://github.com/wedranb/react-slingshot.git`.
-2. **Run the install script**. `npm r=install`
+2. **Run the install script**. `npm install`
 3. **Run the example app**. `npm start -s`
 This will run the automated build process, start up a webserver, and open the application in your default browser. When doing development with this kit, this command will continue watching all your files. Every time you hit save the code is rebuilt, linting runs, and tests run automatically. 
 
