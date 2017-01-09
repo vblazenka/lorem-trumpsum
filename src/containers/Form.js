@@ -101,7 +101,7 @@ function mapStateToProps(state) {
   const { type, size, text, min, max } = state.generator;
 
   return {
-    type: type,
+    type,
     size,
     text,
     min, max
