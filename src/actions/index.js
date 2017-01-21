@@ -13,13 +13,15 @@ export function changeType(type) {
   };
 }
 
+// Change size
 export function changeSize(size) {
   return {
     type: CHANGE_SIZE,
     payload: size
   };
 }
-
+ 
+// Change text
 export function changeText(text) {
   return {
     type: CHANGE_TEXT,
@@ -28,26 +30,37 @@ export function changeText(text) {
 }
 
 // Thunks
+
+// Generate new text because size changed
 export function onChangeSize(size) {
   return function (dispatch, getState) {
+    // Get current state
     const state = getState();
-
+  
+    // Dispatch change size action
     dispatch(changeSize(size));
-
+    
+    // Generate text
     const loremText = generatorService(size, state.generator.type);
-
+  
+    // Dispatch change text action
     dispatch(changeText(loremText));
   };
 }
 
+// Generate new text because type changed
 export function onChangeType(type) {
   return function (dispatch, getState) {
+    // Get current state
     const state = getState();
-
+  
+    // Dispatch change size action
     dispatch(changeType(type));
-
+    
+    // Generate text
     const loremText = generatorService(state.generator.size, type);
-
+    
+    // Dispatch change text action
     dispatch(changeText(loremText));
   };
 }
